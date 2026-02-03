@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>簡単Webアプリ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+    #count {
+      font-size: 32px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>カウンターアプリ</h1>
+  <div id="count">0</div>
+  <button id="btn">＋1</button>
+
+  <script>
+    let count = 0;
+    const countEl = document.getElementById("count");
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", () => {
+      count++;
+      countEl.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
